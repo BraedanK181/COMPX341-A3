@@ -5,7 +5,7 @@ if [ $# -eq 0 ]; then
     exit
 fi
 
-#npm install
+npm install
 
 #Conduct maintenance on files
 for f in `find . -type f -name "*.ts"`
