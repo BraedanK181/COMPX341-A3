@@ -10,7 +10,7 @@ npm install
 #Conduct maintenance on files
 for f in `. -type f -name "*.ts"`
 do
-  $ sed -i '1s/^/<//Braedan Kennett, 1541570 > /' $f
+  $ sed -i '1s/^/<//Braedan Kennett, 1541570 > /' f
 done
 
 if npm run build; then
