@@ -1,6 +1,15 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]
+  then
+    echo "Please pass a commit header as an argument"
+    exit
+fi
+
 npm install
+
+#Conduct maintenance on files
+sed -i '.ts' 's/#Braedan Kennett, 1541570/g' *
 
 if npm run build; then
   echo "build succeded"
