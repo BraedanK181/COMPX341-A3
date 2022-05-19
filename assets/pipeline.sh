@@ -1,7 +1,6 @@
 #!/bin/bash
 
-if [ $# -eq 0 ]
-  then
+if [ $# -eq 0 ]; then
     echo "Please pass a commit header as an argument"
     exit
 fi
@@ -9,7 +8,10 @@ fi
 npm install
 
 #Conduct maintenance on files
-sed -i '.ts' 's/#Braedan Kennett, 1541570/g' *
+for f in `. -type f -name "*.ts"`
+do
+  $ sed -i '1s/^/<//Braedan Kennett, 1541570 > /' $f
+done
 
 if npm run build; then
   echo "build succeded"
