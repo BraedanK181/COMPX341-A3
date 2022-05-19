@@ -10,8 +10,8 @@ fi
 #Conduct maintenance on files
 for f in `find . -type f -name "*.ts"`
 do
-  sed '1 i //Braedan Kennett 1541570' $f
-  #sed -i '1s/^/<//Braedan Kennett 1541570> /'
+  #sed '1 i //Braedan Kennett 1541570' $f
+  sed -i.bak '1 i\//BraedanKennett,1541570' $f
 done
 
 if npm run build; then
