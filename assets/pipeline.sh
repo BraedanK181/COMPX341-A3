@@ -5,12 +5,13 @@ if [ $# -eq 0 ]; then
     exit
 fi
 
-npm install
+#npm install
 
 #Conduct maintenance on files
-for f in `. -type f -name "*.ts"`
+for f in `find . -type f -name "*.ts"`
 do
-  $ sed -i '1s/^/<//Braedan Kennett, 1541570 > /' f
+  sed '1 i //Braedan Kennett 1541570' $f
+  #sed -i '1s/^/<//Braedan Kennett 1541570> /'
 done
 
 if npm run build; then
